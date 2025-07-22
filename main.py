@@ -6,10 +6,13 @@ import time
 from flask import Flask, render_template_string
 from threading import Thread
 import os
+from dotenv import load_dotenv
+load_dotenv()
+
 
 # Telegram config (in code as requested)
-TELEGRAM_BOT_TOKEN = '7693632069:AAGVgnFYxg8m_1gePIpUet9XkEF_F5ZkKNI'
-TELEGRAM_CHAT_ID = '1962340625'
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
 # HTML Template
 HTML_TEMPLATE = """
